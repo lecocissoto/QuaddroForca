@@ -1,1 +1,1 @@
-<%=palavras[0].palavra.replace('\n', '')%>
+<%=palavras[0].palavra.replace(/(\r\n|\n|\r)/gm,"");%>
