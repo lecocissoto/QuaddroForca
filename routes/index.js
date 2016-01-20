@@ -3,7 +3,7 @@ var router = express.Router();
 var Words = require('../models/word');
 
 /* GET home page. */
-// curl "http://localhost:3000/"
+// curl "http://localhost:3000/forca/"
 router.get('/', function(req, res, next) {
   Words.findRandom().limit(1).select({ "palavra": 1}).exec(function(err, words){
     if(err){
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-//curl -X POST "http://localhost:3000/add/" -d"palavra=Flamingo&categoria=animais"
+//curl -X POST "http://localhost:3000/forca/add/" -d"palavra=Flamingo&categoria=animais"
 router.post('/add/', function(req, res, next){
   var newWord = new Words(req.body);
   newWord.save(function(erro, item){
