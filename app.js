@@ -10,7 +10,7 @@ var routes = require('./routes/index');
 var app = express();
 
 //Connecting to database
-mongoose.connect("mongodb://localhost/quaddro");
+mongoose.connect("mongodb://localhost/forca");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
